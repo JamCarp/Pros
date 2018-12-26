@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Pros-->
+        <scene sceneID="Bab-FH-aYC">
+            <objects>
+                <tableViewController storyboardIdentifier="HAPros" id="Kh5-cp-tpZ" customClass="HAProsViewController" customModule="HomeAdvisor" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="svI-gh-Xde">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="HAProCell" rowHeight="83" id="sr2-yl-Iex" customClass="HAProCell" customModule="HomeAdvisor" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="83"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sr2-yl-Iex" id="ZQw-LA-wAe">
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="82.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="obe-nC-rSa">
+                                            <rect key="frame" x="31" y="21" width="287" height="21.5"/>
+                                            <accessibility key="accessibilityConfiguration" identifier="CellProName"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="References Available" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FXl-aj-Hb9">
+                                            <rect key="frame" x="31" y="52.5" width="287" height="19.5"/>
+                                            <accessibility key="accessibilityConfiguration" identifier="CellProRating"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="FXl-aj-Hb9" firstAttribute="leading" secondItem="ZQw-LA-wAe" secondAttribute="leadingMargin" constant="15" id="8wk-7Y-96r"/>
+                                        <constraint firstItem="obe-nC-rSa" firstAttribute="leading" secondItem="ZQw-LA-wAe" secondAttribute="leadingMargin" constant="15" id="9lG-Yv-dfz"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="obe-nC-rSa" secondAttribute="trailing" constant="15" id="BA8-jr-vRl"/>
+                                        <constraint firstAttribute="bottom" secondItem="FXl-aj-Hb9" secondAttribute="bottom" constant="10.5" id="ZlX-mJ-9QM"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="FXl-aj-Hb9" secondAttribute="trailing" constant="15" id="f7B-hk-aKW"/>
+                                        <constraint firstItem="FXl-aj-Hb9" firstAttribute="top" secondItem="obe-nC-rSa" secondAttribute="bottom" constant="10" id="mTy-4j-zoO"/>
+                                        <constraint firstItem="obe-nC-rSa" firstAttribute="top" secondItem="ZQw-LA-wAe" secondAttribute="topMargin" constant="10" id="oES-M3-Zb5"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <accessibility key="accessibilityConfiguration" identifier="HAProCell">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <connections>
+                                    <outlet property="proName" destination="obe-nC-rSa" id="j7Y-Mb-WbF"/>
+                                    <outlet property="proRating" destination="FXl-aj-Hb9" id="R2b-WC-frg"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Kh5-cp-tpZ" id="GqZ-Pt-fOa"/>
+                            <outlet property="delegate" destination="Kh5-cp-tpZ" id="VMU-nv-O6J"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Pros" id="GBH-1S-6eA">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="RjY-xq-KRG">
+                            <color key="tintColor" red="0.96862745100000003" green="0.56470588239999997" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jxU-g7-wEb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1356" y="63.418290854572717"/>
+        </scene>
+        <!--Details-->
+        <scene sceneID="Do2-3z-Roe">
+            <objects>
+                <viewController storyboardIdentifier="HAProDetails" id="mhw-vg-Kg9" customClass="HAProDetailsViewController" customModule="HomeAdvisor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nQx-eB-0J2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nG6-9A-nGw">
+                                <rect key="frame" x="15" y="40" width="345" height="24"/>
+                                <accessibility key="accessibilityConfiguration" identifier="DetailsNameLabel"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" name="haBlack"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speciality" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03M-w3-Hzs">
+                                <rect key="frame" x="15" y="74" width="345" height="21.5"/>
+                                <accessibility key="accessibilityConfiguration" identifier="DetailsSpecialityLabel"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <color key="textColor" name="haBlack"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="References Available" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jKL-D5-8ar">
+                                <rect key="frame" x="15" y="105.5" width="345" height="19.5"/>
+                                <accessibility key="accessibilityConfiguration" identifier="DetailsRatingLabel"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <color key="textColor" name="haBlack"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egs-Yw-N1U">
+                                <rect key="frame" x="15" y="155" width="345" height="19.5"/>
+                                <accessibility key="accessibilityConfiguration" identifier="DetailsLocationLabel"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" name="haBlack"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Services Not Available" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yY1-hx-10b">
+                                <rect key="frame" x="15" y="184.5" width="345" height="19.5"/>
+                                <accessibility key="accessibilityConfiguration" identifier="DetailsServicesLabel"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" name="haBlack"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" text="Overview" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2QW-8X-n4K">
+                                <rect key="frame" x="15" y="234" width="345" height="338"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" name="haOrange"/>
+                                <accessibility key="accessibilityConfiguration" identifier="DetailsOverTextView"/>
+                                <color key="textColor" name="haBlack"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="textContainer.lineFragmentPadding">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="rect" keyPath="textContainerInset">
+                                        <rect key="value" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a9E-Uq-ClO">
+                                <rect key="frame" x="15" y="602" width="345" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vtp-un-HrI">
+                                        <rect key="frame" x="0.0" y="0.0" width="165" height="50"/>
+                                        <color key="backgroundColor" name="haOrange"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="DetailsCallButton"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                        <state key="normal" title="CALL">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="callButtonClicked:" destination="mhw-vg-Kg9" eventType="touchUpInside" id="PCS-tb-2PZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNl-3q-oJG">
+                                        <rect key="frame" x="180" y="0.0" width="165" height="50"/>
+                                        <color key="backgroundColor" name="haOrange"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="DetailsEmailButton"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                        <state key="normal" title="EMAIL">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="emailButtonClicked:" destination="mhw-vg-Kg9" eventType="touchUpInside" id="VSJ-gq-y6f"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="fNl-3q-oJG" firstAttribute="leading" secondItem="Vtp-un-HrI" secondAttribute="trailing" constant="15" id="Ked-qR-e8h"/>
+                                    <constraint firstAttribute="trailing" secondItem="fNl-3q-oJG" secondAttribute="trailing" id="Ljo-RK-nNL"/>
+                                    <constraint firstItem="Vtp-un-HrI" firstAttribute="top" secondItem="a9E-Uq-ClO" secondAttribute="top" id="d6B-IE-Szw"/>
+                                    <constraint firstItem="fNl-3q-oJG" firstAttribute="top" secondItem="a9E-Uq-ClO" secondAttribute="top" id="fET-rn-Kth"/>
+                                    <constraint firstItem="Vtp-un-HrI" firstAttribute="leading" secondItem="a9E-Uq-ClO" secondAttribute="leading" id="hwd-fl-TIq"/>
+                                    <constraint firstAttribute="height" constant="50" id="qqz-JW-Fsy"/>
+                                    <constraint firstAttribute="bottom" secondItem="Vtp-un-HrI" secondAttribute="bottom" id="sKT-2P-TKH"/>
+                                    <constraint firstItem="Vtp-un-HrI" firstAttribute="width" secondItem="fNl-3q-oJG" secondAttribute="width" id="tAZ-jQ-JxF"/>
+                                    <constraint firstAttribute="bottom" secondItem="fNl-3q-oJG" secondAttribute="bottom" id="wuv-et-mDS"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="JAe-U7-xbn" firstAttribute="trailing" secondItem="2QW-8X-n4K" secondAttribute="trailing" constant="15" id="3gh-6I-DZM"/>
+                            <constraint firstItem="a9E-Uq-ClO" firstAttribute="top" secondItem="2QW-8X-n4K" secondAttribute="bottom" constant="30" id="5aq-TO-E01"/>
+                            <constraint firstItem="03M-w3-Hzs" firstAttribute="top" secondItem="nG6-9A-nGw" secondAttribute="bottom" constant="10" id="8mE-Bd-e9F"/>
+                            <constraint firstItem="egs-Yw-N1U" firstAttribute="top" secondItem="jKL-D5-8ar" secondAttribute="bottom" constant="30" id="9pH-1E-Lx4"/>
+                            <constraint firstItem="JAe-U7-xbn" firstAttribute="trailing" secondItem="a9E-Uq-ClO" secondAttribute="trailing" constant="15" id="A7g-ag-JaL"/>
+                            <constraint firstItem="yY1-hx-10b" firstAttribute="top" secondItem="egs-Yw-N1U" secondAttribute="bottom" constant="10" id="AeJ-mX-Iyh"/>
+                            <constraint firstItem="jKL-D5-8ar" firstAttribute="leading" secondItem="JAe-U7-xbn" secondAttribute="leading" constant="15" id="DdS-cB-jt2"/>
+                            <constraint firstItem="jKL-D5-8ar" firstAttribute="top" secondItem="03M-w3-Hzs" secondAttribute="bottom" constant="10" id="EFf-m9-mV3"/>
+                            <constraint firstItem="JAe-U7-xbn" firstAttribute="trailing" secondItem="jKL-D5-8ar" secondAttribute="trailing" constant="15" id="FQd-yg-ZEl"/>
+                            <constraint firstItem="2QW-8X-n4K" firstAttribute="top" secondItem="yY1-hx-10b" secondAttribute="bottom" constant="30" id="Kh6-IJ-d1Q"/>
+                            <constraint firstItem="nG6-9A-nGw" firstAttribute="leading" secondItem="JAe-U7-xbn" secondAttribute="leading" constant="15" id="LFo-8c-6iH"/>
+                            <constraint firstItem="2QW-8X-n4K" firstAttribute="leading" secondItem="JAe-U7-xbn" secondAttribute="leading" constant="15" id="NtR-Ts-won"/>
+                            <constraint firstItem="a9E-Uq-ClO" firstAttribute="leading" secondItem="JAe-U7-xbn" secondAttribute="leading" constant="15" id="Yiw-8E-KmK"/>
+                            <constraint firstItem="03M-w3-Hzs" firstAttribute="leading" secondItem="JAe-U7-xbn" secondAttribute="leading" constant="15" id="by8-ue-Ace"/>
+                            <constraint firstItem="JAe-U7-xbn" firstAttribute="trailing" secondItem="yY1-hx-10b" secondAttribute="trailing" constant="15" id="cgV-rQ-g4Y"/>
+                            <constraint firstItem="JAe-U7-xbn" firstAttribute="bottom" secondItem="a9E-Uq-ClO" secondAttribute="bottom" constant="15" id="dnj-pU-M7F"/>
+                            <constraint firstItem="nG6-9A-nGw" firstAttribute="top" secondItem="JAe-U7-xbn" secondAttribute="top" constant="20" id="iP7-F3-05B"/>
+                            <constraint firstItem="egs-Yw-N1U" firstAttribute="leading" secondItem="JAe-U7-xbn" secondAttribute="leading" constant="15" id="iTw-aW-bMR"/>
+                            <constraint firstItem="JAe-U7-xbn" firstAttribute="trailing" secondItem="egs-Yw-N1U" secondAttribute="trailing" constant="15" id="jcE-A5-Lkp"/>
+                            <constraint firstItem="yY1-hx-10b" firstAttribute="leading" secondItem="JAe-U7-xbn" secondAttribute="leading" constant="15" id="pDI-Jo-HdS"/>
+                            <constraint firstItem="JAe-U7-xbn" firstAttribute="trailing" secondItem="03M-w3-Hzs" secondAttribute="trailing" constant="15" id="qYO-aO-grn"/>
+                            <constraint firstItem="JAe-U7-xbn" firstAttribute="trailing" secondItem="nG6-9A-nGw" secondAttribute="trailing" constant="15" id="vjV-OA-Q7h"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JAe-U7-xbn"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Details" id="13C-Jm-goS"/>
+                    <connections>
+                        <outlet property="callButton" destination="Vtp-un-HrI" id="vs2-vx-r7Q"/>
+                        <outlet property="emailButton" destination="fNl-3q-oJG" id="cee-t7-T8q"/>
+                        <outlet property="locationLabel" destination="egs-Yw-N1U" id="o6o-DC-E0D"/>
+                        <outlet property="nameLabel" destination="nG6-9A-nGw" id="FY1-An-lQF"/>
+                        <outlet property="overviewTextView" destination="2QW-8X-n4K" id="Fc9-QA-cvy"/>
+                        <outlet property="ratingsLabel" destination="jKL-D5-8ar" id="Aie-co-VlH"/>
+                        <outlet property="servicesLabel" destination="yY1-hx-10b" id="O1x-9x-Hkq"/>
+                        <outlet property="specialityLabel" destination="03M-w3-Hzs" id="obS-7Q-kZI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Akd-lm-uhe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2408.8000000000002" y="62.518740629685162"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="haBlack">
+            <color red="0.25490196078431371" green="0.25490196078431371" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="haOrange">
+            <color red="0.96862745098039216" green="0.56470588235294117" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
